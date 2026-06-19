@@ -147,8 +147,8 @@ with tab2:
 
     monthly_yr = ( 
         filtered .groupby([filtered.order_date.dt.to_period("M").astype(str), "order_year"])["Sales"] .sum().reset_index().rename(columns={"order_date": "Month"})) 
-        fig = px.line(monthly_yr, x="Month", y="Sales", color="order_year", title="Monthly Sales by Year") 
-        st.plotly_chart(fig, use_container_width=True)
+    fig = px.line(monthly_yr, x="Month", y="Sales", color="order_year", title="Monthly Sales by Year") 
+    st.plotly_chart(fig, use_container_width=True)
 
 
 
