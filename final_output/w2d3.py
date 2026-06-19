@@ -20,7 +20,7 @@ st.set_page_config(
 # --------------------------------------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\jarir\Desktop\OJT BCA\project 4.1\data\superstore_clean.csv",
+    return pd.read_csv(r"final_output/superstore_clean.csv",
         parse_dates=["Order Date", "Ship Date"]
     )
 
